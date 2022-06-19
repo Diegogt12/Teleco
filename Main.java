@@ -2,7 +2,7 @@ package com.company;
 
 public class Main {
 
-    public static void main(String[] args) t {
+    public static void main(String[] args) {
 	try {
         ParteDeTrabajo p1 = new ParteDeTrabajo("manual", 5, 6.0);
         ParteDeIncidencia p2 = new ParteDeIncidencia("manual", 5, 6.0, 10);
