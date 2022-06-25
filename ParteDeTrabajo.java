@@ -7,7 +7,7 @@ public class ParteDeTrabajo {
     private String descripcionTrabajo;
     private int horasInvertidas;
     private double costeHora;
-    private long FechaDeCreacion;
+    private long fechaDeCreacion;
 
     public String getDescripcionTrabajo() {
         return descripcionTrabajo;
@@ -34,11 +34,11 @@ public class ParteDeTrabajo {
     }
 
     public long getFechaDeCreacion() {
-        return FechaDeCreacion;
+        return this.fechaDeCreacion;
     }
 
     public void setFechaDeCreacion(long fechaDeCreacion) {
-        FechaDeCreacion = fechaDeCreacion;
+        this.fechaDeCreacion = fechaDeCreacion;
     }
 
     public ParteDeTrabajo(String descripcionTrabajo, int horasInvertidas, double costeHora) throws ExArgumentoIncorrecto {
