@@ -28,7 +28,7 @@ public class Main {
         c1.asignaParte(ps2);
         c1.generarFactura();
         System.out.println("-Cliente 1 por coste : ");
-        
+
         for( Factura f: c.obtenerFacturasPorCoste()){
                 System.out.println( f.getInfo());
                 System.out.println( f.getCoste());

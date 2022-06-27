@@ -33,16 +33,19 @@ public class Gestor {
         this.clientes.put(c.getNif(), c);
     }
 
-    public void insertarParte(String nif, ParteDeTrabajo p) {
-        this.clientes.get(nif).asignaParte(p);
+    public void insertarParte(String nif, ParteDeTrabajo p) throws ExArgumentoIncorrecto {
+        if(this.clientes.containsKey(nif)) this.clientes.get(nif).asignaParte(p);
+        else throw new ExArgumentoIncorrecto("NIF no existe");
     }
 
-    public void generarFacturasPorFecha(String nif) {
-        this.clientes.get(nif).obtenerFacturasPorFecha();
+    public void generarFacturasPorFecha(String nif) throws ExArgumentoIncorrecto {
+        if(this.clientes.containsKey(nif)) this.clientes.get(nif).obtenerFacturasPorFecha();
+        else throw new ExArgumentoIncorrecto("NIF no existe");
     }
 
-    public void generarFacturaPorCoste(String nif) {
-        this.clientes.get(nif).obtenerFacturasPorCoste();
+    public void generarFacturaPorCoste(String nif) throws ExArgumentoIncorrecto {
+        if(this.clientes.containsKey(nif)) this.clientes.get(nif).obtenerFacturasPorCoste();
+        else throw new ExArgumentoIncorrecto("Nif no existe");
     }
 
     public double calculaCosteTotal() {
@@ -54,7 +57,3 @@ public class Gestor {
 
 }
 }
-
-
-//d. Escribir un método calculaCosteTotal que calcule el coste completo de la empresa
-//de telecomunicaciones en instalaciones para todos sus clientes.
